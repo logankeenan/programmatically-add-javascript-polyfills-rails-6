@@ -6,6 +6,11 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <script>
+        window.fetch || document.write('<script src="<%= asset_pack_path('polyfills/fetch.js') %>"><\/script>');
+        window.Promise || document.write('<script src="<%= asset_pack_path('polyfills/promise.js') %>"><\/script>');
+    </script>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
